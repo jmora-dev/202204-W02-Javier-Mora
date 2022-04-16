@@ -14,50 +14,54 @@
         />
     </head>
     <body>
-        <header>
-            <img src="./images/logo2.png" alt="Pets logo" />
+        <header class="navbar">
+            <a href="#" class="navbar__logo">
+                <img
+                    class="navbar__logo__img"
+                    src="./images/logo2.png"
+                    alt="Pets logo"
+                />
+            </a>
             <nav>
-                <button>
-                    <div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
+                <button class="navbar__expand-btn">
+                    <span class="navbar__expand-btn__bar"></span>
+                    <span class="navbar__expand-btn__bar"></span>
+                    <span class="navbar__expand-btn__bar"></span>
                 </button>
             </nav>
         </header>
         <main>
-            <section>
-                <header>
-                    <h2>Pet activities</h2>
-                    <span>Take a closer look</span>
-                    <button>View all</button>
+            <section class="section">
+                <header class="section__header">
+                    <h2 class="section__title">Pet activities</h2>
+                    <span class="section__subtitle">Take a closer look</span>
+                    <button class="button">View all</button>
                 </header>
-                <div>
-                    <section>
-                        <button>
-                            <div>
-                                <span>Activities</span>
-                                <h3>Toys Playtime</h3>
+                <div class="card-list">
+                    <a href="#" class="card card--dog01">
+                        <div class="card__content-panel">
+                            <div class="clard__text-panel">
+                                <span class="card__section">Activities</span>
+                                <h3 class="card__title">Toys Playtime</h3>
                             </div>
-                        </button>
-                    </section>
-                    <section>
-                        <button>
-                            <div>
-                                <span>Activities</span>
-                                <h3>Active Rest</h3>
+                        </div>
+                    </a>
+                    <a href="#" class="card card--cat01">
+                        <div class="card__content-panel">
+                            <div class="clard__text-panel">
+                                <span class="card__section">Activities</span>
+                                <h3 class="card__title">Active Rest</h3>
                             </div>
-                        </button>
-                    </section>
-                    <section>
-                        <button>
-                            <div>
-                                <span>Activities</span>
-                                <h3>Game Walks</h3>
+                        </div>
+                    </a>
+                    <a href="#" class="card card--dog02">
+                        <div class="card__content-panel">
+                            <div class="clard__text-panel">
+                                <span class="card__section">Activities</span>
+                                <h3 class="card__title">Game Walks</h3>
                             </div>
-                        </button>
-                    </section>
+                        </div>
+                    </a>
                 </div>
             </section>
         </main>

@@ -7,6 +7,17 @@
     font-family: "Nunito", sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -16,6 +27,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 0.5rem 1rem;
+    background-color: #fff;
     box-shadow: 0 0 10px #ddd;
 }
 
@@ -27,6 +39,14 @@ body {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+.navbar__small {
+    display: block;
+}
+
+.navbar__large {
+    display: none;
 }
 
 .navbar__expand-btn {
@@ -57,8 +77,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 1rem 0.5rem 1.5rem 0.5rem;
+}
+
+.section__header__text-container {
+    text-align: center;
 }
 
 .section__title {
@@ -71,7 +95,19 @@ body {
 .section__subtitle {
     font-size: 3.5rem;
     font-weight: 800;
-    margin-bottom: 2.5rem;
+}
+
+.dropdown {
+    color: inherit;
+    position: relative;
+    font-weight: inherit;
+    font-size: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown::after {
 }
 
 .button {
@@ -81,7 +117,8 @@ body {
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 0.05rem;
-    padding: 0.7rem 1.2rem;
+    text-decoration: none;
+    padding: 0.7em 1.2em;
     color: #fff;
     font-size: 1rem;
     background-color: var(--main-color);
@@ -93,10 +130,28 @@ body {
     color: var(--main-color);
 }
 
+.button.button--secondary {
+    color: #444;
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+.button.button--secondary:hover,
+.button.button--secondary:focus {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.button.button--header {
+    margin-top: 3rem;
+}
+
 .card-list {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 2rem;
     width: 100%;
     margin: 2rem 0;
@@ -104,8 +159,7 @@ body {
 
 .card {
     border: 0;
-    width: 75%;
-    max-width: 40rem;
+    width: 30rem;
     aspect-ratio: 1.5;
     border-radius: 1.8rem;
     color: #fff;
@@ -121,11 +175,6 @@ body {
     align-items: flex-end;
     border-radius: 1.8rem;
     background-color: rgba(0, 0, 0, 0.3);
-    opacity: 0;
-}
-
-.card__content-panel:hover {
-    opacity: 1;
 }
 
 .card__text-panel {
@@ -159,4 +208,111 @@ body {
     background-image: url(./images/02.jpg);
     background-position: center;
     background-size: cover;
+}
+
+@media (min-width: 900px) {
+    .navbar {
+        position: fixed;
+        width: 100%;
+        padding: 1rem 1rem;
+    }
+
+    .navbar__small {
+        display: none;
+    }
+
+    .navbar__large {
+        display: flex;
+        align-items: stretch;
+    }
+
+    .navbar__logo {
+        height: 3rem;
+    }
+
+    .menu {
+        display: flex;
+        gap: 4rem;
+        font-size: 1.1rem;
+        font-weight: 800;
+        align-items: center;
+    }
+
+    .menu__item {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        border-bottom: 3px solid transparent;
+    }
+
+    .menu__item:hover,
+    .menu__item:focus {
+        color: var(--main-color);
+        border-bottom: 3px solid var(--main-color);
+    }
+
+    .menu__item:hover > *,
+    .menu__item:focus > * {
+        color: inherit;
+    }
+
+    .section {
+        padding: 5rem 3rem;
+        align-items: flex-start;
+    }
+
+    .section__header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+    }
+
+    .section__header__text-container {
+        text-align: left;
+    }
+
+    .section__title {
+        font-size: 1.4rem;
+    }
+
+    .section__subtitle {
+        font-size: 4rem;
+    }
+
+    .button {
+        font-size: 1.2rem;
+        padding: 0.9em 1.4em;
+        border-radius: 0 1.6rem 1.6rem 1.6rem;
+    }
+
+    .button--header {
+        margin-bottom: 1rem;
+    }
+
+    .card-list {
+        flex-direction: row;
+    }
+
+    .card {
+        aspect-ratio: 0.8;
+    }
+
+    .card__content-panel {
+        align-items: center;
+        opacity: 0;
+    }
+
+    .card__content-panel:hover {
+        opacity: 1;
+    }
+
+    .card__section {
+        font-size: 1.2rem;
+    }
+
+    .card__title {
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
 }

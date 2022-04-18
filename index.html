@@ -17,6 +17,10 @@
             href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap"
             rel="stylesheet"
         />
+        <script
+            src="https://kit.fontawesome.com/2f2eef429d.js"
+            crossorigin="anonymous"
+        ></script>
     </head>
     <body>
         <header class="navbar">
@@ -40,10 +44,33 @@
                         <a href="#" class="menu__link">Home</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#" class="menu__link">Live Demo</a>
+                        <a href="#" class="menu__link menu__link--dropdown"
+                            >Live Demo
+                            <i
+                                class="fa-solid fa-caret-down dropdown__caret"
+                            ></i
+                        ></a>
+                        <div class="dropdown__menu">
+                            <ul>
+                                <li class="dropdown__link">
+                                    Pets Boarding Services
+                                </li>
+                                <li class="dropdown__link">
+                                    Pets Toys and Food Shop
+                                </li>
+                                <li class="dropdown__link">
+                                    Pets Training School
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="menu__item">
-                        <a href="#" class="menu__link">Live Demo Block</a>
+                        <a href="#" class="menu__link"
+                            >Live Demo Block
+                            <i
+                                class="fa-solid fa-caret-down dropdown__caret"
+                            ></i
+                        ></a>
                     </li>
                     <li>
                         <a href="#" class="button button--secondary">Buy now</a>

@@ -118,20 +118,18 @@ body {
     color: var(--main-color);
 }
 
-.button.button--secondary {
+.button--secondary {
     color: #444;
     background-color: transparent;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
 }
 
-.button.button--secondary:hover,
-.button.button--secondary:focus {
+.button--secondary:hover,
+.button--secondary:focus {
     background-color: var(--main-color);
     color: #fff;
 }
 
-.button.button--header {
+.button--header {
     margin-top: 3rem;
 }
 
@@ -305,6 +303,11 @@ body {
         font-size: 1.2rem;
         padding: 0.9em 1.4em;
         border-radius: 0 1.6rem 1.6rem 1.6rem;
+    }
+
+    .button--small {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
     }
 
     .button--header {

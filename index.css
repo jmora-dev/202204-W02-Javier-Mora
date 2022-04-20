@@ -277,6 +277,9 @@ body {
     .section {
         padding: 5rem 3rem;
         align-items: flex-start;
+        max-width: 100rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .section__header {
@@ -314,6 +317,7 @@ body {
 
     .card {
         aspect-ratio: 0.8;
+        max-width: none;
     }
 
     .card__content-panel {
